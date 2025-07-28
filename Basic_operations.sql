@@ -1,0 +1,11 @@
+create database Amrita;
+use Amrita;
+create table student(name varchar(6), age int(2), address varchar(10), rollno int(8));
+describe student;
+insert into student (name, age, address, rollno) values ('Ram', 12, 'amaravati', 101);
+select * from student;
+insert into student (name, age, address, rollno) values ('sita', 14, 'vijayawada', 102) ;
+select name from student;
+alter table student add year varchar(2); 
+update student set year='1' where name='Ram'; 
+select age from student where name='Ram';
