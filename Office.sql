@@ -1,0 +1,14 @@
+create database office;
+use office;
+create table Employees(EmpID int(4), Name varchar(12), Department varchar(10), Salary int(8));
+describe Employees;
+insert into Employees (EmpID, Name, Department, Salary) values (101, 'Alice', 'HR', 50000);
+insert into Employees (EmpID, Name, Department, Salary) values (102, 'Bob', 'Finance', 60000);
+insert into Employees (EmpID, Name, Department, Salary) values (103, 'Charlie', 'IT', 70000);
+select * from Employees;
+alter table Employees add joiningdate date;
+update Employees set Salary=65000 where EmpID=102;
+update Employees set joiningdate='2025/07/16' where EmpID=101;
+update Employees set joiningdate='2025/07/17' where EmpID=102;
+delete from Employees where Name='Charlie';
+select * from Employees;
